@@ -7,10 +7,10 @@ client = pymongo.MongoClient("mongodb://localhost:27017/neurolabDB")
 
 DATABASE_NAME='aps'
 COLLECTION_NAME='sensor'
-
+DATAFILE_PATH = "/config/workspace/aps_failure_training_set1.csv"
 
 if __name__=="__main__":
-    df=pd.read_csv("/config/workspace/aps_failure_training_set1.csv" )
+    df=pd.read_csv(DATAFILE_PATH)
     print(f"Rows and Columns:{df.shape}")
 
     #convert dataframe to json 
